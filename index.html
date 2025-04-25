@@ -39,9 +39,9 @@
                 <div class="card h-100">
                     <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Card 1">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title 1</h5>
+                        <h5 class="card-title">Card Title <p id="increasess">1</p></h5>
                         <p class="card-text">This is a description for card 1.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" id='click-btt' class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,13 @@
             document.getElementById('modalEmail').textContent = document.getElementById('email').value;
             document.getElementById('modalMessage').textContent = document.getElementById('message').value;
         });
+        value=1;
+        document.getElementById("click-btt").addEventListener('click', function (){
+            value++;
+            document.getElementById("increasess").innerHTML=value;
+        });
     </script>
 </body>
 
 </html>
+
